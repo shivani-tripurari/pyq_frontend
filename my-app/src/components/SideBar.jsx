@@ -8,7 +8,11 @@ import ArrowRight from "./ArrowRight";
 
 const SideBar = ({ selectedSubject, onSelect }) => {
   return (
-    <aside className="w-64 p-4 pr-4 bg-white border-r sticky top-0 h-screen overflow-y-auto">
+    <aside className="w-full md:w-80 p-4 bg-white 
+      border-b md:border-r 
+      fixed top-0 z-20 md:sticky md:h-screen 
+      md:top-0 overflow-y-auto"
+    >
         <div className="flex flex-col gap-4 justify-center items-center pt-6 pb-6">
                 <div className="flex justify-center items-center gap-4">
                     <Image 
@@ -22,19 +26,20 @@ const SideBar = ({ selectedSubject, onSelect }) => {
             </Para>
         </div>
 
-      <div className="space-y-4">
+      <div className="flex flex-row md:flex-col md:space-y-4 w-full">
         {subjectsData.map((subject, idx) => {
           return (
             <div
             key={idx}
-            className={`flex items-center justify-between w-full px-4 py-2 rounded-lg ${
-                selectedSubject === subject.subjectName
-                ? "bg-[#1D2933] text-white"
-                : "bg-white text-muted-foreground"
-            }`}
+           className={`flex flex-col md:flex-row items-center justify-between w-full px-4 py-2 rounded-none md:rounded-lg
+                ${
+                  selectedSubject === subject.subjectName
+                    ? "border-b-2 border-[#1D2933] md:bg-[#1D2933] md:text-white md:border-none"
+                    : "bg-white text-muted-foreground"
+                }`}
             >
             {/* Left part: Icon + Name */}
-            <div className="flex items-center gap-x-3 flex-1">
+            <div className="flex flex-col md:flex-row items-center gap-x-3 flex-1">
                 <Image
                 src={subject.subjectIcon}
                 alt={`${subject.subjectName} icon`}
@@ -51,7 +56,7 @@ const SideBar = ({ selectedSubject, onSelect }) => {
 
             {/* Right Arrow */}
             <ArrowRight
-                className={`w-5 h-5 ${
+                className={`hidden md:block w-5 h-5 ${
                 selectedSubject === subject.subjectName ? "text-white" : "text-black"
                 }`}
             />

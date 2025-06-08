@@ -64,14 +64,14 @@ export default function Home() {
 
 
   return (
-     <div className="flex min-h-screen bg-background">
-      <SideBar
+     <div className="flex flex-col md:flex-row min-h-screen bg-background">
+        <SideBar
         selectedSubject={selectedSubject}
         onSelect={setSelectedSubject}
-      />
-      <div className="flex flex-1 flex-col items-center border-r">
+        />
+      <div className="flex flex-1 flex-col items-center border-r border-gray-200">
         <div className="w-full sticky top-0 z-10 bg-white flex flex-col justify-center items-center border-b">
-              <div className="flex flex-col justify-center items-center">
+              <div className="hidden md:flex md:flex-col md:justify-center md:items-center">
                 <div className="flex justify-between items-center">
                    {selectedSubjectData && (
                     <Image
@@ -106,6 +106,7 @@ export default function Home() {
           <Card subjectSelected={selectedSubject} data={filteredChapters} />
         </div>
       </div>
+      <div className="hidden md:block w-30"></div>
     </div>
   );
 }
