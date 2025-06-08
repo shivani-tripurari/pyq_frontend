@@ -1,4 +1,4 @@
-# 📚 PYQs - Next.js + Tailwind + shadcn/ui
+# 📚 PYQs - Next.js + Tailwind 
 
 ## 🎯 Objective
 
@@ -10,7 +10,6 @@ Recreated the provided UI screens using **Next.js**, **Tailwind CSS**, and **sha
 
 - [Next.js (App Router)](https://nextjs.org/docs/app)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Redux Toolkit](https://redux-toolkit.js.org/) or any other state management tool
 - [shadcn/ui](https://ui.shadcn.com/) for UI components
 - [Phosphor Icons](https://phosphoricons.com/) for chapter icons
 
