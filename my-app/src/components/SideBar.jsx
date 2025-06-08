@@ -59,7 +59,7 @@ const SideBar = ({ selectedSubject, onSelect }) => {
             {/* Right Arrow */}
             <ArrowRight
                 className={`hidden md:block w-5 h-5 ${
-                selectedSubject === subject.subjectName ? "text-white" : "text-black"
+                selectedSubject === subject.subjectName ? "text-white" : "text-foreground"
                 }`}
             />
         </div>
