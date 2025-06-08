@@ -40,7 +40,7 @@ const Card = ({subjectSelected, data}) => {
                 return (
                 <div
                 key={idx}
-                    className="p-4 rounded-md border-0 md:border-2 md:border-gray-200 bg-white flex flex-col md:flex-row justify-start items-start md:justify-between md:items-center gap-2"
+                    className="p-4 rounded-md border-0 md:border-2  bg-background flex flex-col md:flex-row justify-start items-start md:justify-between md:items-center gap-2"
                 >
                     <div className="flex justify-center items-center gap-3">
                         {/* random icons from phosphor icons */}

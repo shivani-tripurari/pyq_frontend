@@ -30,7 +30,7 @@ const Tabs = ({
                       onFilterChange(filter);
                       onClassChange(e.target.value);
                     }}
-                    className="appearance-none p-1.5 pr-8 rounded-lg border-2 text-sm text-gray-700 bg-white"
+                    className="appearance-none p-1.5 pr-8 rounded-lg border-2 text-sm text-foreground bg-background"
                   >
                     <option value="">Select Class</option>
                     {classes.map((cls) => (
@@ -41,7 +41,7 @@ const Tabs = ({
                   </select>
                   <CaretDown
                       size={16}
-                      className="pointer-events-none text-gray-500 absolute right-2 top-1/2 transform -translate-y-1/2"
+                      className="pointer-events-none text-muted-foreground absolute right-2 top-1/2 transform -translate-y-1/2"
                   />
               </div>
             );
@@ -55,7 +55,7 @@ const Tabs = ({
                   onFilterChange(filter);
                   onUnitChange(e.target.value);
                 }}
-                className="appearance-none p-1.5 pr-8 rounded-lg border-2 text-sm text-gray-700 bg-white"
+                className="appearance-none p-1.5 pr-8 rounded-lg border-2 text-sm text-foreground bg-background"
               >
                 <option value="">Units</option>
                 {units.map((unit) => (
@@ -66,7 +66,7 @@ const Tabs = ({
               </select>
                   <CaretDown
                       size={16}
-                      className="pointer-events-none text-gray-500 absolute right-2 top-1/2 transform -translate-y-1/2"
+                      className="pointer-events-none text-muted-foreground absolute right-2 top-1/2 transform -translate-y-1/2"
                   />
               </div>
             );
@@ -79,13 +79,13 @@ const Tabs = ({
               onClick={() => onFilterChange(filter)}
               className={`
                   relative p-[1.5px] rounded-lg text-sm transition-all duration-150
-                  ${isWeakChapters ? "bg-gradient-to-r from-gray-200 to-orange-400 p-0" : "border-2 border-gray-200"}
+                  ${isWeakChapters ? "bg-gradient-to-r from-sidebar-border to-orange-400 p-0" : "border-2 "}
               `}
               >
               <span
                   className={`
                   block rounded-md px-3 py-1
-                  ${activeFilter === filter ? "bg-[#1D2933] text-white" : "bg-white text-gray-600"}
+                  ${activeFilter === filter ? "bg-[#1D2933] text-foreground" : "bg-background text-foreground"}
                   `}
               >
                   {filter}

@@ -69,8 +69,8 @@ export default function Home() {
         selectedSubject={selectedSubject}
         onSelect={setSelectedSubject}
         />
-      <div className="flex flex-1 flex-col items-center border-r border-gray-200">
-        <div className="w-full sticky top-0 z-10 bg-white flex flex-col justify-center items-center border-b">
+      <div className="flex flex-1 flex-col items-center border-r border-muted-sidebar-border">
+        <div className="w-full sticky top-0 z-10 bg-background flex flex-col justify-center items-center border-b">
               <div className="hidden md:flex md:flex-col md:justify-center md:items-center">
                 <div className="flex justify-between items-center">
                    {selectedSubjectData && (
@@ -83,7 +83,7 @@ export default function Home() {
                   )}
                 <Header selectedSubject={`${selectedSubject} PYQs`} />
                 </div>
-                <Para className="text-[#505D79] pb-4">
+                <Para className="text-accent pb-4">
                   Chapter-wise collection of {selectedSubject} PYQ's
                 </Para>
               </div>

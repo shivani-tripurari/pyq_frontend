@@ -5,13 +5,15 @@ import { subjectsData } from "@/lib/constants";
 
 import Para from "./Para";
 import ArrowRight from "./ArrowRight";
+import DarkModeToggle from "./DarkModeToggle";
 
 const SideBar = ({ selectedSubject, onSelect }) => {
   return (
-    <aside className="w-full md:w-80 p-4 bg-white 
-      border-b md:border-r 
-      fixed top-0 z-20 md:sticky md:h-screen 
-      md:top-0 overflow-y-auto"
+    <aside   className="w-full md:w-80 p-4 bg-background 
+    border-b md:border-r 
+    fixed top-0 z-20 md:sticky md:h-screen 
+    md:top-0 overflow-y-auto 
+    flex flex-col"
     >
         <div className="flex flex-col gap-4 justify-center items-center pt-6 pb-6">
                 <div className="flex justify-center items-center gap-4">
@@ -21,7 +23,7 @@ const SideBar = ({ selectedSubject, onSelect }) => {
                     />
                     <h2 className="text-xl font-bold">JEE Mains</h2>
                 </div>
-            <Para className="text-[#505D79]">
+            <Para className="text-accent">
                 2025 - 2009 | 173 Papers | 15825 Qs
             </Para>
         </div>
@@ -35,7 +37,7 @@ const SideBar = ({ selectedSubject, onSelect }) => {
                 ${
                   selectedSubject === subject.subjectName
                     ? "border-b-2 border-[#1D2933] md:bg-[#1D2933] md:text-white md:border-none"
-                    : "bg-white text-muted-foreground"
+                    : "bg-background text-muted-foreground"
                 }`}
             >
             {/* Left part: Icon + Name */}
@@ -65,6 +67,9 @@ const SideBar = ({ selectedSubject, onSelect }) => {
           );
         })}
       </div>
+        <div className="flex justify-start items-start mt-auto pt-6">
+          <DarkModeToggle/>
+        </div>
     </aside>
   );
 };
