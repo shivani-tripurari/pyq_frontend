@@ -12,9 +12,6 @@ import { data } from "@/data/data.js";
 
 export default function Home() {
 
-  const myData = data;
-  console.log("my data ", data);
-
   const [selectedSubject, setSelectedSubject] = useState("Physics");
   const [activeFilter, setActiveFilter] = useState("");
   const [selectedClass, setSelectedClass] = useState("");
@@ -26,11 +23,11 @@ export default function Home() {
   );
 
   const classes = useMemo(() => {
-    return [...new Set(myData.filter(i => i.subject === selectedSubject).map(i => i.class))];
+    return [...new Set(data.filter(i => i.subject === selectedSubject).map(i => i.class))];
   }, [selectedSubject]);
 
   const units = useMemo(() => {
-    return [...new Set(myData
+    return [...new Set(data
       .filter(i => i.subject === selectedSubject && (!selectedClass || i.class === selectedClass))
       .map(i => i.unit)
     )];
@@ -84,7 +81,7 @@ export default function Home() {
                 <Header selectedSubject={`${selectedSubject} PYQs`} />
                 </div>
                 <Para className="text-accent pb-4">
-                  Chapter-wise collection of {selectedSubject} PYQ's
+                  Chapter-wise collection of {selectedSubject} PYQs
                 </Para>
               </div>
         </div>
